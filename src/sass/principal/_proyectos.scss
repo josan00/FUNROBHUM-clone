@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use '../base/mixin' as m;
+
+.section_proyectos {
+    img {
+        object-fit: cover;
+        width: 100% !important;
+        filter: brightness(75%);
+    }
+
+    .carousel-control-prev {
+        justify-content: start;
+        margin-left: 10px;
+    }
+
+    .carousel-control-next {
+        justify-content: end;
+        margin-right: 10px;
+    }
+
+    .img-fluid {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+   .col-md-5 {
+    min-height: 300px;
+
+    @include media-breakpoint-up(md) {
+        min-height: 100% !important;
+       }
+   }
+}
+
+.ejes {
+    .col-lg-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        display: flex;
+        place-items: center;
+        place-content: center;
+        color: $white;
+        background-color: $dark;
+        border: 1px solid transparents;
+        border-radius: 50%;
+        height: 75px;
+        width: 75px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+    }
+}

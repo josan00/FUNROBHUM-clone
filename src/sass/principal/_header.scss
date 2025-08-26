@@ -1,0 +1,49 @@
+@use '../custom' as *;
+
+.header {
+    position: relative;
+    height: 71px;
+    width: 100%;
+    padding: 5px 10px;
+    // position: fixed;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    z-index: 4;
+
+    .header_logo {
+        height: 45px;
+        width: 45px;
+    }
+
+    #btn_Eng, #btn_Spa {
+      text-decoration: none;  
+      cursor: pointer;
+    }
+
+    #btn_Eng:hover, #btn_Spa:hover {
+        color: $dark !important;
+    }
+
+    #btn_Eng.active, #btn_Spa.active {
+        color: $dark !important;
+    }
+
+    .nav {
+        display: none !important;
+
+        @include media-breakpoint-up(lg) {
+            display: flex !important;
+        }
+    }
+}
+
+.lenguage_button {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+    }
+}
+
+.nav-link:hover {
+    color: $primary !important;
+}

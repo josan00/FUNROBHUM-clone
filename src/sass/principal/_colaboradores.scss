@@ -1,0 +1,25 @@
+@use '../custom' as *;
+@use '../base/mixin' as m;
+
+.section_colaboradores {
+    .grid_colaboradores {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 15px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .img-logo {
+        max-height: auto;
+        width: 100%;
+    }
+
+    .max_img_75 {
+        width: 75%;
+    }
+
+    .max_img_90 {
+        width: 90%;
+    }
+}

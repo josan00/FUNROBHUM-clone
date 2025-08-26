@@ -1,0 +1,36 @@
+@use '../custom' as *;
+
+.footer {
+    background-color: lighten($grisOscuro, 50%);
+
+    .footer_title {
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+
+.footer_social {
+    font-size: 30px;
+
+    a {
+        color: $white;
+        background-color: $dark;
+        border: 1px solid transparents;
+        border-radius: 6px;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+    }
+
+    .fb:hover {
+        background-color: $azul;
+    }
+
+    .ws:hover {
+        background-color: $verde;
+    }
+
+    .int:hover {
+        background-color: $amarillo;
+    }
+}

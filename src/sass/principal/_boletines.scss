@@ -1,0 +1,92 @@
+@use '../custom' as *;
+@use '../base/mixin' as m;
+@use '../base/animaciones' as *;
+
+.section_boletines {      
+    .grid_boletines {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .boletin_galeria, .boletin_Ejes, .boletin_proyectos,.boletin_miembros {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border-radius: 12px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boletin_galeria:hover::after, .boletin_Ejes:hover::after, .boletin_proyectos:hover::after, .boletin_miembros:hover::after {
+        content: 'Leer más';
+        opacity: 1;
+        font-size: 2.2rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        animation-name: animacion-btn-f1;
+        animation-duration: 0.6s;
+        animation-delay: 0;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        transition: all 0.1s ease;
+    }
+
+    .boletin_galeria:hover::after {
+        background-color: $danger;
+    }
+
+    .boletin_Ejes:hover::after {
+        background-color: $primary;
+    }
+
+    .boletin_proyectos:hover::after {
+        background-color: $success;
+    }
+
+    .boletin_miembros:hover::after {
+        background-color: $warning;
+    }
+
+    .boletin_galeria {
+        @include m.background-image-red("../img/image_familia.webp");
+    }
+
+    .boletin_Ejes {
+        @include m.background-image-blue("../img/image_familia.webp");
+    }
+
+    .boletin_proyectos {
+        @include m.background-image-green("../img/image_familia.webp");
+    }
+
+    .boletin_miembros {
+        @include m.background-image-yellow("../img/image_familia.webp");
+    }
+
+    .grid_boletines_en {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .boletin_galeria:hover::after, .boletin_Ejes:hover::after, .boletin_proyectos:hover::after, .boletin_miembros:hover::after {
+            content: 'Read more';
+        }
+    }
+}

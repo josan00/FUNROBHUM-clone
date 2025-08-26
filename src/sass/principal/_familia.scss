@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use '../base/mixin' as m;
+
+.section_familia {
+    @include m.background-image('../img/image_familia.webp');
+    color: $white;
+    padding: 10rem 0;
+    object-fit: cover;
+}
+
+.valor_text {
+    font-weight: 500;
+    font-size: 22px !important;
+}
+
+.carousel-inner {
+    min-height: 220px;
+}
+
+.carousel-item .mt-1 {
+    line-height: 29px;
+}
+
+.contacto_social_voluntariado {
+    font-size: 40px;
+
+    a {
+        text-decoration: none;
+        color: $secondary;
+    }
+
+    .fb:hover {
+        color: $primary;
+    }
+
+    .ws:hover {
+        color: $success;
+    }
+
+    .inst:hover {
+        color: $warning;
+    }
+}
+
+.modal-body {
+    overflow: hidden !important;
+
+    .col-voluntariado {
+        h4 {
+            color: #162039 !important;
+        }
+
+        p.fw-bold {
+            color: #162039 !important;
+        }
+    }
+}
