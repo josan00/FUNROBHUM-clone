@@ -1,0 +1,11 @@
+{
+  "name": "build",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "gulp server",
+    "build": "gulp build",
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}
